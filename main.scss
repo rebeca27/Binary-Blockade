@@ -1,0 +1,12 @@
+@import 'variables';
+@import 'themes';
+@import 'animations';
+@import 'base';
+
+.theme-dark {
+  animation: fadeIn 0.5s;
+}
+
+.cell {
+  animation: bounce 0.5s;
+}

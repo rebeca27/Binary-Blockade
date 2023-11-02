@@ -1,0 +1,21 @@
+@mixin theme($theme-name, $bg-color, $text-color) {
+    .theme-#{$theme-name} {
+      background-color: $bg-color;
+      color: $text-color;
+  
+      #grid {
+        border: 2px solid darken($bg-color, 10%);
+      }
+  
+      .cell {
+        border: 1px solid darken($bg-color, 20%);
+        &:hover {
+          background-color: lighten($bg-color, 5%);
+        }
+      }
+    }
+  }
+  
+  @include theme('light', map-get($primary-colors, light), map-get($primary-colors, dark));
+  @include theme('dark', map-get($primary-colors, dark), map-get($primary-colors, light));
+  
